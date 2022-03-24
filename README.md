@@ -9,6 +9,11 @@ Use Web3-python to initialize and create an unchangeable smart contract for each
 - requirements.txt
 
 ## Show
+---
 ![web page](assets/page_query.jpg)
+
+---
 ![web page](assets/page_add.jpg)
+
+---
 ![web page](assets/page_buy.jpg)
