@@ -3,34 +3,9 @@ from dash import dcc
 from dash import html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
+from init import tool
+from views import add, query, buy
 
-from views import query
-from views import page_1, page_2
-
-# -----------------------------------------------------------------------------# 
-import json
-from utils.contrast import CarContrast
-tool = CarContrast()
-
-import pandas as pd
-data = pd.read_csv('assets/car.csv')
-
-all_data = dict()
-
-for i in range(1):
-    info = dict(data.iloc[i])
-    for j in info.keys():
-        info[j] = str(info[j])
-    all_data[info['car_ID']] = info
-
-all_addresses = dict()
-for id in all_data.keys():
-    address = tool.new(all_data[id])
-    all_addresses[id] = [address]
-
-tool.addresses = all_addresses
-
-# -----------------------------------------------------------------------------# 
 
 app = dash.Dash(
     __name__,
@@ -41,11 +16,11 @@ app.layout = dbc.Container(
     [
         dcc.Location(id='url', refresh=False),
 
-        dcc.Link('query', href='/query', refresh=False, style={'margin-left': '0px'}),
+        dcc.Link('QUERY', href='/query', refresh=False, style={'margin-left': '0px'}),
         # html.Br(),
-        dcc.Link('页面B', href='/pageB', refresh=False, style={'margin-left': '20px'}),
+        dcc.Link('ADD', href='/add', refresh=False, style={'margin-left': '40px'}),
         # html.Br(),
-        dcc.Link('页面C', href='/pageC', refresh=False, style={'margin-left': '20px'}),
+        dcc.Link('BUY', href='/buy', refresh=False, style={'margin-left': '40px'}),
 
         html.Hr(),  # 分隔线
 
@@ -69,11 +44,11 @@ def render_page_content(pathname):
     elif pathname == '/query':
         return query.layout
 
-    elif pathname == '/pageB':
-        return page_1.layout
+    elif pathname == '/add':
+        return add.layout
 
-    elif pathname == '/pageC':
-        return page_2.layout
+    elif pathname == '/buy':
+        return buy.layout
 
     else:
         return '404 NOT FOUND'

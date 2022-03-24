@@ -2,8 +2,8 @@ import dash
 from dash import dcc, html, callback
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
-from app import tool
 import json
+from init import tool
 
 layout = html.Div(
     [
@@ -16,7 +16,7 @@ layout = html.Div(
                     style={
                         'width': '50%',
                         'height': '50%',
-                        'margin-left': '180px',
+                        'margin-left': '150px',
                         }
                 ),
 
@@ -28,12 +28,7 @@ layout = html.Div(
                         dbc.Col(
                             [
                                 dbc.Label('Car ID :'),
-                                dcc.Dropdown(
-                                    id='car_list',
-                                    options=[
-                                        {'label': key, 'value': key}
-                                        for key in tool.addresses.keys()
-                                    ])
+                                dbc.Input(type="text", id='input-queryID'),
                             ]
                         )
                     ]
@@ -46,9 +41,9 @@ layout = html.Div(
                     [
                         dbc.Col(
                             [
-                                dbc.Label('Search : ', html_for='car_attributes'),
+                                dbc.Label('Search : ', html_for='input_attributes'),
                                 dcc.Dropdown(
-                                    id='car_attributes',
+                                    id='input_attributes',
                                     multi=True,
                                     options=[
                                         {'label': item, 'value': item}
@@ -62,17 +57,15 @@ layout = html.Div(
                 html.Hr(),
 
                 # 提交查询按钮
-                dbc.Row(
-                    [
-                        dbc.Col(
-                            dbc.Button('Query', id='query-button'),
-                        ),
-                    ]
+
+                dbc.Button(
+                    'Query',
+                    id='query-button',
+                    size='md',
                 ),
 
-                # show text
-                # html.Div(id='output-value'),
 
+                # show text
                 dbc.Tabs(
                     id='output-value',
                     style={'margin-top': '20px'},
@@ -81,7 +74,7 @@ layout = html.Div(
             ],
             style={
             'margin-top': '-20px',
-            'max-width': '800px'
+            'max-width': '600px'
             }
         ),
 
@@ -91,8 +84,8 @@ layout = html.Div(
 @callback(
     Output('output-value', 'children'),
     Input('query-button', 'n_clicks'),
-    [State('car_list', 'value'),
-     State('car_attributes', 'value')]
+    [State('input-queryID', 'value'),
+     State('input_attributes', 'value')]
 )
 def render_content(n_clicks, car_id, car_attributes):
     '''
@@ -117,25 +110,37 @@ def render_content(n_clicks, car_id, car_attributes):
                 # 渲染Initial Info面板内容
                 tabs.append(
                     dbc.Tab(
-                        [
-                            html.H2(car_info['CarName']),
-                            html.P(json.dumps(car_info))
-                        ],
-                        label='Initial Info'
-                    )
-                )
+                        html.Blockquote(
+                            [
+                                html.H4('Initial'),
+                                html.P(json.dumps(car_info))
+                            ],
+                            style={
+                                'background-color': 'rgba(211, 211, 211, 0.25)',
+                                'text-indent': '1rem'
+                            }
+                        ),
+                        label='Initial Info',
+                    ),
+                ),
 
             if 'Repair Info' in car_attributes:
                 # 渲染Repair Info面板内容
                 tabs.append(
                     dbc.Tab(
-                        [
-                            html.H2('Records'),
-                            html.P(json.dumps(car_info)),
-                        ],
-                        label='Repair Info'
-                    )
-                )
+                    html.Blockquote(
+                            [
+                                html.H4('Records'),
+                                html.P(json.dumps(car_info))
+                            ],
+                            style={
+                                'background-color': 'rgba(211, 211, 211, 0.25)',
+                                'text-indent': '1rem'
+                            },
+                        ),
+                        label='Repair Info',
+                    ),
+                ),
 
             # 返回渲染结果
             return tabs
