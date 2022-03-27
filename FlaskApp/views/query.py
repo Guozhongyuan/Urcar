@@ -12,11 +12,11 @@ layout = html.Div(
         dbc.Container(
             [
                 html.Img(
-                    src='assets/car.jpg',
+                    src='assets/fox.jpg',
                     style={
                         'width': '50%',
                         'height': '50%',
-                        'margin-left': '150px',
+                        'margin-left': '130px',
                         }
                 ),
 

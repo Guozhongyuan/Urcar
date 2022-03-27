@@ -1,0 +1,118 @@
+[Sun Mar 27 12:33:37.629714 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464] mod_wsgi (pid=37369): Failed to exec Python script file '/var/www/FlaskApp/FlaskApp.wsgi'.
+[Sun Mar 27 12:33:37.629893 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464] mod_wsgi (pid=37369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp.wsgi'.
+[Sun Mar 27 12:33:37.630710 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464] Traceback (most recent call last):
+[Sun Mar 27 12:33:37.630782 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464]   File "/var/www/FlaskApp/FlaskApp.wsgi", line 4, in <module>
+[Sun Mar 27 12:33:37.630808 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464]     install_solc(version='latest')
+[Sun Mar 27 12:33:37.630828 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464]   File "/usr/local/lib/python3.8/dist-packages/solcx/install.py", line 452, in install_solc
+[Sun Mar 27 12:33:37.630846 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464]     _install_solc_unix(version, filename, show_progress, solcx_binary_path)
+[Sun Mar 27 12:33:37.630863 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464]   File "/usr/local/lib/python3.8/dist-packages/solcx/install.py", line 604, in _install_solc_unix
+[Sun Mar 27 12:33:37.630880 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464]     with open(install_path, "wb") as fp:
+[Sun Mar 27 12:33:37.630912 2022] [wsgi:error] [pid 37369:tid 140106237200128] [client 83.97.20.34:54464] PermissionError: [Errno 13] Permission denied: '/var/www/.solcx/solc-v0.8.13'
+[Sun Mar 27 12:33:51.620260 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456] mod_wsgi (pid=37468): Failed to exec Python script file '/var/www/FlaskApp/FlaskApp.wsgi'.
+[Sun Mar 27 12:33:51.620432 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456] mod_wsgi (pid=37468): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp.wsgi'.
+[Sun Mar 27 12:33:51.621122 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456] Traceback (most recent call last):
+[Sun Mar 27 12:33:51.621192 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456]   File "/var/www/FlaskApp/FlaskApp.wsgi", line 4, in <module>
+[Sun Mar 27 12:33:51.621217 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456]     install_solc(version='latest')
+[Sun Mar 27 12:33:51.621237 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456]   File "/usr/local/lib/python3.8/dist-packages/solcx/install.py", line 452, in install_solc
+[Sun Mar 27 12:33:51.621254 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456]     _install_solc_unix(version, filename, show_progress, solcx_binary_path)
+[Sun Mar 27 12:33:51.621271 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456]   File "/usr/local/lib/python3.8/dist-packages/solcx/install.py", line 604, in _install_solc_unix
+[Sun Mar 27 12:33:51.621288 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456]     with open(install_path, "wb") as fp:
+[Sun Mar 27 12:33:51.621319 2022] [wsgi:error] [pid 37468:tid 140106228807424] [client 122.231.254.112:52456] PermissionError: [Errno 13] Permission denied: '/var/www/.solcx/solc-v0.8.13'
+[Sun Mar 27 12:37:49.688136 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769] mod_wsgi (pid=37576): Failed to exec Python script file '/var/www/FlaskApp/FlaskApp.wsgi'.
+[Sun Mar 27 12:37:49.688308 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769] mod_wsgi (pid=37576): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp.wsgi'.
+[Sun Mar 27 12:37:49.689084 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769] Traceback (most recent call last):
+[Sun Mar 27 12:37:49.689173 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769]   File "/var/www/FlaskApp/FlaskApp.wsgi", line 4, in <module>
+[Sun Mar 27 12:37:49.689200 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769]     install_solc(version='latest')
+[Sun Mar 27 12:37:49.689220 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769]   File "/usr/local/lib/python3.8/dist-packages/solcx/install.py", line 452, in install_solc
+[Sun Mar 27 12:37:49.689238 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769]     _install_solc_unix(version, filename, show_progress, solcx_binary_path)
+[Sun Mar 27 12:37:49.689256 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769]   File "/usr/local/lib/python3.8/dist-packages/solcx/install.py", line 604, in _install_solc_unix
+[Sun Mar 27 12:37:49.689273 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769]     with open(install_path, "wb") as fp:
+[Sun Mar 27 12:37:49.689306 2022] [wsgi:error] [pid 37576:tid 140106228807424] [client 122.231.254.112:50769] PermissionError: [Errno 13] Permission denied: '/var/www/.solcx/solc-v0.8.13'
+[Sun Mar 27 12:40:18.145651 2022] [wsgi:error] [pid 37785:tid 140106212022016] [client 183.159.171.184:50852] contrast creating start, referer: http://120.78.228.15/add
+[Sun Mar 27 12:40:18.145799 2022] [wsgi:error] [pid 37785:tid 140106212022016] [client 183.159.171.184:50852] contrast address:  200, referer: http://120.78.228.15/add
+[Sun Mar 27 12:40:18.145833 2022] [wsgi:error] [pid 37785:tid 140106212022016] [client 183.159.171.184:50852] contrast info:  test car info, referer: http://120.78.228.15/add
+[Sun Mar 27 12:40:18.145854 2022] [wsgi:error] [pid 37785:tid 140106212022016] [client 183.159.171.184:50852] contrast creating end, referer: http://120.78.228.15/add
+[Sun Mar 27 12:40:18.145872 2022] [wsgi:error] [pid 37785:tid 140106212022016] [client 183.159.171.184:50852] , referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:05.743596 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056] Exception on /_dash-update-component [POST], referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743630 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056] Traceback (most recent call last):, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743635 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2073, in wsgi_app, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743638 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     response = self.full_dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743641 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1518, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743644 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     rv = self.handle_user_exception(e), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743647 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1516, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743650 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     rv = self.dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743652 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1502, in dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743655 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743669 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/dash/dash.py", line 1345, in dispatch, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743672 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     response.set_data(func(*args, outputs_list=outputs_list)), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743674 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/dash/_callback.py", line 151, in add_context, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743677 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     output_value = func(*func_args, **func_kwargs)  # %% callback invoked %%, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743679 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/var/www/FlaskApp/FlaskApp/views/query.py", line 105, in render_content, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743682 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     car_info = tool.getInfo(tool.addresses[car_id][0]), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743684 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056] KeyError: '1250', referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743713 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056] ERROR:app:Exception on /_dash-update-component [POST], referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743718 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056] Traceback (most recent call last):, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743720 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2073, in wsgi_app, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743723 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     response = self.full_dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743725 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1518, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743728 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     rv = self.handle_user_exception(e), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743730 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1516, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743733 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     rv = self.dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743735 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1502, in dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743738 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743740 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/dash/dash.py", line 1345, in dispatch, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743743 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     response.set_data(func(*args, outputs_list=outputs_list)), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743752 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/usr/local/lib/python3.8/dist-packages/dash/_callback.py", line 151, in add_context, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743754 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     output_value = func(*func_args, **func_kwargs)  # %% callback invoked %%, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743757 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]   File "/var/www/FlaskApp/FlaskApp/views/query.py", line 105, in render_content, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743759 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056]     car_info = tool.getInfo(tool.addresses[car_id][0]), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:05.743762 2022] [wsgi:error] [pid 37784:tid 140106348766976] [client 183.159.171.184:53056] KeyError: '1250', referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.489006 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060] Exception on /_dash-update-component [POST], referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490838 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060] Traceback (most recent call last):, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490848 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2073, in wsgi_app, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490851 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     response = self.full_dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490854 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1518, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490856 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     rv = self.handle_user_exception(e), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490859 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1516, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490861 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     rv = self.dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490864 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1502, in dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490866 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490869 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/dash/dash.py", line 1345, in dispatch, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490871 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     response.set_data(func(*args, outputs_list=outputs_list)), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490874 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/dash/_callback.py", line 151, in add_context, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490876 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     output_value = func(*func_args, **func_kwargs)  # %% callback invoked %%, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490909 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/var/www/FlaskApp/FlaskApp/views/query.py", line 105, in render_content, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490913 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     car_info = tool.getInfo(tool.addresses[car_id][0]), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490915 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060] KeyError: '1250', referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490955 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060] ERROR:app:Exception on /_dash-update-component [POST], referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490960 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060] Traceback (most recent call last):, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490963 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2073, in wsgi_app, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490965 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     response = self.full_dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490968 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1518, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490970 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     rv = self.handle_user_exception(e), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490973 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1516, in full_dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490975 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     rv = self.dispatch_request(), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490978 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1502, in dispatch_request, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490980 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490983 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/dash/dash.py", line 1345, in dispatch, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490985 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     response.set_data(func(*args, outputs_list=outputs_list)), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490988 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/usr/local/lib/python3.8/dist-packages/dash/_callback.py", line 151, in add_context, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490990 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     output_value = func(*func_args, **func_kwargs)  # %% callback invoked %%, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490993 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]   File "/var/www/FlaskApp/FlaskApp/views/query.py", line 105, in render_content, referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.490995 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060]     car_info = tool.getInfo(tool.addresses[car_id][0]), referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:06.491003 2022] [wsgi:error] [pid 37784:tid 140106228807424] [client 183.159.171.184:53060] KeyError: '1250', referer: http://120.78.228.15/query
+[Sun Mar 27 12:45:18.735969 2022] [wsgi:error] [pid 37785:tid 140106203629312] [client 122.231.254.112:53068] contrast creating start, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:18.736028 2022] [wsgi:error] [pid 37785:tid 140106203629312] [client 122.231.254.112:53068] contrast address:  201, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:18.736035 2022] [wsgi:error] [pid 37785:tid 140106203629312] [client 122.231.254.112:53068] contrast info:  12:45, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:18.736039 2022] [wsgi:error] [pid 37785:tid 140106203629312] [client 122.231.254.112:53068] contrast creating end, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:18.736043 2022] [wsgi:error] [pid 37785:tid 140106203629312] [client 122.231.254.112:53068] , referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:37.769000 2022] [wsgi:error] [pid 37784:tid 140106170058496] [client 183.159.171.184:53081] contrast creating start, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:37.769061 2022] [wsgi:error] [pid 37784:tid 140106170058496] [client 183.159.171.184:53081] contrast address:  200, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:37.769068 2022] [wsgi:error] [pid 37784:tid 140106170058496] [client 183.159.171.184:53081] contrast info:  12:45, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:37.769073 2022] [wsgi:error] [pid 37784:tid 140106170058496] [client 183.159.171.184:53081] contrast creating end, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:37.769077 2022] [wsgi:error] [pid 37784:tid 140106170058496] [client 183.159.171.184:53081] , referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:52.705201 2022] [wsgi:error] [pid 37784:tid 140106340374272] [client 183.159.171.184:53090] contrast creating start, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:52.705280 2022] [wsgi:error] [pid 37784:tid 140106340374272] [client 183.159.171.184:53090] contrast address:  201, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:52.705295 2022] [wsgi:error] [pid 37784:tid 140106340374272] [client 183.159.171.184:53090] contrast info:  12:45, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:52.705304 2022] [wsgi:error] [pid 37784:tid 140106340374272] [client 183.159.171.184:53090] contrast creating end, referer: http://120.78.228.15/add
+[Sun Mar 27 12:45:52.705311 2022] [wsgi:error] [pid 37784:tid 140106340374272] [client 183.159.171.184:53090] , referer: http://120.78.228.15/add
