@@ -92,7 +92,7 @@ application = app.server
 `cd /var/log/apache2`
 `vim FlaskApp-error.log`
 
-### 5. 其他
+### 5. TODO
 
 1. `mkdir /var/www/.solcx`， 但是 web3 仍未获得权限
 2. 添加进 FlaskApp.wsgi，无效
