@@ -14,6 +14,12 @@ data_show = df.to_dict('records')
 
 layout = dbc.Container(
     [
+        html.Hr(),  # 分割线
+
+        html.H1('Show Car Information',className="display-4 ",style={'margin-left': '220px',}),
+
+        html.Br(),
+
         dash_table.DataTable(
             data=data_show,
             columns=[
@@ -25,7 +31,7 @@ layout = dbc.Container(
                 'background-color': '#e3f2fd'
             },
             style_table={
-                'height': '500px',
+                'height': '600px',
                 'overflow-y': 'auto'
             },
             style_header={
@@ -41,35 +47,7 @@ layout = dbc.Container(
             fill_width=True,
             fixed_rows={'headers': True},
         ),
-        html.Br(),
-        html.Br(),
-        dbc.Row(
-            [
-                dbc.Col(
-                    dbc.Form(
-                        [
-                            dbc.Input(type="text", id='input-buyer'),
-                            dbc.FormText("input car id"),
-                        ]
-                    ),
-                    width=5
-                ),
-                dbc.Col(
-                    dbc.Form(
-                        [
-                            dbc.Input(type="text", id='input-account'),
-                            dbc.FormText("input account address"),
-                        ]
-                    ),
-                    width=5
-                ),
-                dbc.Col(
-                    dbc.Button('BUY', id='buy-button'),
-                    width=2
-                )
-            ],
-            style={'margin-left': '60px'}
-        ),
+        html.Hr(),  # 分割线
     ],
 
     style={
