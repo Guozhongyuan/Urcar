@@ -86,15 +86,15 @@ application = app.server
 ### 4. 怎样debug
 
 每次改完py之后
-service apache2 reload
+`service apache2 reload`
 
 如果网页显示不成功，在这里查看报错信息
-cd /var/log/apache2
-vim FlaskApp-error.log
+`cd /var/log/apache2`
+`vim FlaskApp-error.log`
 
 ### 5. 其他
 
-1. mkdir /var/www/.solcx， 但是 web3 仍未获得权限
+1. `mkdir /var/www/.solcx`， 但是 web3 仍未获得权限
 2. 添加进 FlaskApp.wsgi，无效
 ```
 from solcx import install_solc
