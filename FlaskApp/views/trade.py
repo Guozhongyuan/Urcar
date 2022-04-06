@@ -21,17 +21,28 @@ toAddress = w3.eth.accounts[1] #车主，收款人地址
 layout = html.Div(
     dbc.Container(
         [
-            html.Img(
+            dbc.Container(
+                html.Img(
                     src='assets/car.jpg',
                     style={
-                        'width': '60%',
-                        'height': '60%',
-                        'margin-left': '150px',
-                        }
+                        'width': '100%',
+                        'height': '100%',
+                        'margin-left': '0px',
+                    }    
                 ),
+                style={
+                    'max-width': '500px'
+                }
+            ),
+
             html.Br(),
-            html.H1('Trading System',className="display-4 ",style={'margin-left': '185px',}),
-            html.Br(),
+
+            dbc.Container(
+                    html.H1('Trade Cars',className="display-4 "),
+                    style={
+                        'max-width': '310px'
+                    }
+                ),
             html.Hr(),
             dbc.Row(
                 [
@@ -73,18 +84,23 @@ layout = html.Div(
 
             html.Hr(),
         
-            html.Div(
-                [
-                    dbc.Button(' Trade ', id='account-submit',color="primary",className="d-grid gap-4 col-4 ",style={'margin-left': '260px',}), 
-                    html.A(html.Button('Refresh Data'),href='/trade',style={'margin-left': '140px',}),
-                    dbc.Spinner(html.Div(id="loading-output",style={'margin-top': '30px',})),
-                ],
-                
-                # className="d-grid gap-1 col-2 mx-auto",
+            dbc.Container(
+                html.Div(
+                    [
+                        dbc.Button(' Trade ', id='account-submit',color="primary",className="d-grid gap-4 col-4 ",style={'margin-left': '180px',}), 
+                        html.A(html.Button('Refresh Data'),href='/trade',style={'margin-left': '40px',}),
+                        dbc.Spinner(html.Div(id="loading-output",style={'margin-top': '30px',})),
+                    ],
+                    
+                    # className="d-grid gap-1 col-2 mx-auto",
+                ),
+                style={
+                    'max-width': '600px'
+                }
             ),
             html.Br(),
             html.Br(),
-            html.Div(id='account-record-container'),
+            html.Div(id='account-record-container',),
         ],
         style={
             'margin-top': '20px',
@@ -151,6 +167,8 @@ def callback1(value):
     prevent_initial_call=True
 )
 def callback2(n_clicks,value_car):
+    global address_car_owner
+    global fromAddress
     if value_car != None:
         if n_clicks :
         # 发起交易
@@ -161,6 +179,7 @@ def callback2(n_clicks,value_car):
                 'value': value_car
             })
             trans_hash = w3.eth.get_transaction(trans)
+            address_car_owner = fromAddress
             trans_hash = dict(trans_hash)
             ctx_msg = json.dumps({
                 'hash': str(trans_hash["hash"].hex()),
@@ -174,10 +193,19 @@ def callback2(n_clicks,value_car):
                 'gas':trans_hash["gas"],
                 "gasPrice":trans_hash["gasPrice"]
             }, indent=2)
-
-            return html.Pre(ctx_msg),dbc.Alert("Congratulations to you! Successful deal!", color="success" ,style={
-                'margin-top': '10px',
-                })
+# dbc.Alert("Has been traded to "+str(address_car_owner)+"\n"+"Congratulations! The deal was successful!", color="success" ,style={
+#                 'margin-top': '10px',
+#                 })
+            return [html.Pre(ctx_msg),dbc.Alert(
+    [
+        html.H4("Congratulations! The deal was successful!", className="alert-heading"),
+        html.Hr(),
+        html.P(
+            "Car has been traded to "+str(address_car_owner),
+            className="mb-0",
+        ),
+    ]
+)]
         else :
             raise PreventUpdate
     else:

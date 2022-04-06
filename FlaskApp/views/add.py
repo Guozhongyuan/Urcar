@@ -11,9 +11,25 @@ layout = html.Div(
 
         dbc.Container(
             [
-                html.Hr(),  # 分割线
-
-                html.H1('Add Car Information',className="display-4 ",style={'margin-left': '140px',}),
+                dbc.Container(
+                html.Img(
+                    src='assets/car.jpg',
+                    style={
+                        'width': '100%',
+                        'height': '100%',
+                        'margin-left': '0px',
+                    }    
+                ),
+                style={
+                    'max-width': '500px'
+                }
+            ),
+                dbc.Container(
+                    html.H1('Add Cars',className="display-4 "),
+                    style={
+                        'max-width': '270px'
+                    }
+                ),
 
                 html.Hr(),
                 dbc.Row(
@@ -108,20 +124,23 @@ layout = html.Div(
                 html.Hr(),
                 html.Br(),
 
-                html.Div(
-                    [
-                        dbc.Button(
-                            'ADD',
-                            id='add-button',
-                            size='lg',
-                            color="primary",
-                            className="d-grid gap-4 col-4 ",
-                            style={'margin-left': '260px',}
-                        ),
-                        html.Hr(),
-                        dbc.Spinner(html.Div(id="loading-add",style={'margin-top': '0px',})),
-                    ],
+                dbc.Container(
+                    dbc.Button(
+                        'ADD',
+                        id='add-button',
+                        size='lg',
+                        color="primary",
+                        className="d-grid gap-4 col-12 ",
+                        # style={'margin-left': '260px',}
+                    ),
+                    style={
+                        'max-width': '300px'
+                    }
                 ),
+
+                html.Hr(),
+                dbc.Spinner(html.Div(id="loading-add",style={'margin-top': '0px',})),
+  
 
             ],
             style={

@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 
 from dash import dash_table
 
-from app import tool
+from init import tool
 import pandas as pd
 
 df = tool.df
@@ -14,11 +14,30 @@ data_show = df.to_dict('records')
 
 layout = dbc.Container(
     [
-        html.Hr(),  # 分割线
-
-        html.H1('Show Car Information',className="display-4 ",style={'margin-left': '220px',}),
+        html.Br(),  # 换行
+        dbc.Container(
+                html.Img(
+                    src='assets/car.jpg',
+                    style={
+                        'width': '100%',
+                        'height': '100%',
+                        'margin-left': '0px',
+                    }    
+                ),
+                style={
+                    'max-width': '500px'
+                }
+            ),
+        dbc.Container(
+            
+            html.H1('Show Cars',className="display-4 "),
+            style={
+                'max-width': '310px'
+            }
+        ),
 
         html.Br(),
+        html.Hr(),
 
         dash_table.DataTable(
             data=data_show,

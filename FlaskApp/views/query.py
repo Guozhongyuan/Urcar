@@ -12,18 +12,28 @@ layout = html.Div(
 
         dbc.Container(
             [
-                html.Img(
-                    src='assets/fox.jpg',
+                dbc.Container(
+                    html.Img(
+                        src='assets/fox.jpg',
+                        style={
+                            'width': '100%',
+                            'height': '100%',
+                            'margin-left': '-10px',
+                            }
+                    ),
                     style={
-                        'width': '50%',
-                        'height': '50%',
-                        'margin-left': '170px',
-                        }
+                        'max-width': '400px',
+                    }
                 ),
 
-                html.Hr(),  # 分割线
+                # html.Hr(),  # 分割线
 
-                html.H1('Varify Car Information',className="display-4 ",style={'margin-left': '120px',}),
+                dbc.Container(
+                    html.H1(' Check Cars',className="display-4 "),
+                    style={
+                        'max-width': '330px'
+                    }
+                ),
 
                 html.Hr(),  # 分割线
 
@@ -63,13 +73,19 @@ layout = html.Div(
 
                 # 提交查询按钮
 
-                dbc.Button(
-                    'Query',
-                    id='query-button',
-                    size='lg',
-                    color="primary",
-                    className="d-grid gap-4 col-4 ",
-                    style={'margin-left': '250px',}
+                dbc.Container(
+                    [
+                        dbc.Button(
+                            'Query',
+                            id='query-button',
+                            size='lg',
+                            color="primary",
+                            className="d-grid gap-4 col-12 ",
+                        ),
+                    ],
+                    style={
+                        'max-width': '300px'
+                    }
                 ),
 
                 html.Hr(),
